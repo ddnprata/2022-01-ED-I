@@ -62,3 +62,16 @@ int TStaticList_is_full(const TStaticList* list){
 int TStaticList_is_empty(const TStaticList* list){
   return list->qty == 0;
 }
+
+TStaticList* TStaticList_concatenate(const TStaticList* list1, TStaticList* list2){
+  TStaticList* nova = NULL;
+  if(list1->qty + list2->qty <= MAX){
+    nova = TStaticList_create();
+    int i;
+    for(i=0; i< list1->qty; i++)
+      TStaticList_insert_end(nova, list1->data[i]);
+    for(i=0; i< list2->qty; i++)
+      TStaticList_insert_end(nova, list2->data[i]);
+  }
+  return nova;
+}

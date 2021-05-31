@@ -26,5 +26,7 @@ int TStaticList_insert_begin(TStaticList*, int);
  * */
 void TStaticList_print(const TStaticList*);
 
+//Primeira questao
+TStaticList* TStaticList_concatenate(const TStaticList*, TStaticList*);
 
 #endif
