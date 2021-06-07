@@ -45,6 +45,10 @@ int TLinkedList_insert_end(TLinkedList* list, int info){
   return 1;
 }
 
+int TLinkedList_insert_begin(TLinkedList* list, int info){
+  
+}
+
 void TLinkedList_print(TLinkedList* list){
   TNo* aux = list->inicio;
   while(aux!=NULL){
