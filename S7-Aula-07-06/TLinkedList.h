@@ -19,6 +19,12 @@ int* TLinkedList_search(TLinkedList*, int);
  * Retorna 0 ou 1 indicando a falha ou o sucesso da operação.
  * */
 int TLinkedList_delete(TLinkedList*, int);
-
-
+/**
+ * Concatena duas listas em uma terceira.
+ * */
+TLinkedList* TLinkedList_concatenate(TLinkedList*, TLinkedList*);
+/**
+ * Recebe uma lista de números inteiros e devolve uma lista apenas com os números pares.
+ * */
+TLinkedList* TLinkedList_so_pares(TLinkedList*);
 #endif

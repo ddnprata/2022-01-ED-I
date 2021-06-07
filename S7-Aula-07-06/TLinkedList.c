@@ -62,3 +62,25 @@ void TLinkedList_print(TLinkedList* list){
   putchar('\n');
 }
 
+
+
+TLinkedList* TLinkedList_concatenate(TLinkedList* L1, TLinkedList* L2){
+  if(L1==NULL || L2==NULL) return NULL;
+  
+  TLinkedList* L3 = TLinkedList_create();
+  for(TNo* aux = L1->inicio; aux!=NULL; aux = aux->prox)
+    TLinkedList_insert_end(L3, aux->info);
+  for(TNo* aux = L2->inicio; aux!=NULL; aux = aux->prox)
+    TLinkedList_insert_end(L3, aux->info);
+  return L3;
+}
+
+TLinkedList* TLinkedList_so_pares(TLinkedList* L1){
+  if(L1==NULL) return NULL;
+  
+  TLinkedList* L2 = TLinkedList_create();
+  for(TNo* aux = L1->inicio; aux!=NULL; aux = aux->prox)
+    if(aux->info % 2 == 0)
+      TLinkedList_insert_end(L2, aux->info);
+  return L2;
+}
