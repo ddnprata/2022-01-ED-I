@@ -8,7 +8,7 @@ typedef struct no{
 } TNo;
 
 struct list{
-  TNo* inicio;
+  TNo *inicio;
 };
 
 /*
