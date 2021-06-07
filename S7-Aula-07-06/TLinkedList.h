@@ -10,7 +10,14 @@ int TLinkedList_insert_begin(TLinkedList*, int);
 void TLinkedList_print(TLinkedList*);
 
 //Para vocês implementarem
-int TLinkedList_search(TLinkedList*, int);
+/**
+ * Busca por um elemento na lista. Retorna o endereço do inteiro armazenado pelo no.
+ * */
+int* TLinkedList_search(TLinkedList*, int);
+/**
+ * Busca e deleta um elemento da lista, refazendo as conexões necessárias. 
+ * Retorna 0 ou 1 indicando a falha ou o sucesso da operação.
+ * */
 int TLinkedList_delete(TLinkedList*, int);
 
 
