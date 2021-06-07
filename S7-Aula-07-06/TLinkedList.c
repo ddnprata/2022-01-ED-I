@@ -46,7 +46,11 @@ int TLinkedList_insert_end(TLinkedList* list, int info){
 }
 
 int TLinkedList_insert_begin(TLinkedList* list, int info){
-  
+  TNo* novo = TNo_createNFill(info);
+  if(novo == NULL || list == NULL) return 0;  
+  novo->prox = list->inicio;
+  list->inicio = novo;
+  return 1;
 }
 
 void TLinkedList_print(TLinkedList* list){
