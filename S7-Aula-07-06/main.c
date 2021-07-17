@@ -5,6 +5,7 @@ int main(){
   //Sem o no descritor
   TLinkedList* list = TLinkedList_create();
   TLinkedList* list2 = TLinkedList_create();
+
   int V[] = {1, 5, 7, 2, 6};
   for(int i=0; i < 5; i++){
     if(!TLinkedList_insert_begin((i<3)? list:list2, V[i]))

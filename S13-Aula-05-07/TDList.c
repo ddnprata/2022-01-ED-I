@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef struct{
+  int a;
+  float b;
+} NovoTipo;
+
 typedef struct no{
   int info;
   struct no *prox;
@@ -11,8 +16,7 @@ typedef struct no{
 struct d_list{
   TNo *inicio, *fim;
 };
-
-TDList* TDList_create(){
+struct d_list* TDList_create(){
   TDList* nova = malloc(sizeof(TDList));
   if(nova){
     nova->inicio = NULL;
@@ -57,7 +61,10 @@ void TDList_print(TDList* lista){
 //Imprimir a lista do fim para o início
 void TDList_reverse_print(TDList* lista){
   TNo* aux = lista->fim;
-  for(; aux; aux = aux->ant)
+  for(; aux; aux = aux->ant){
     printf("<-[%d]-> ", aux->info);
+    aux = aux->ant;
+    if(aux==NULL) break;
+  }
   putchar('\n');
 }
