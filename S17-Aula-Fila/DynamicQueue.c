@@ -48,6 +48,8 @@ int Queue_dequeue(Queue* fila, int* info){
   fila->end->prox = oldBegin->prox;
   free(oldBegin);
   fila->qty--;
+  if(fila->qty==0)
+    fila->end = NULL;
   return 1;
 }
 

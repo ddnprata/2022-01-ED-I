@@ -35,7 +35,7 @@ int Stack_push(Stack* stack, int info){
   return 1;
 }
 int Stack_pop(Stack* stack, int* info){
-  if(!Stack_empty(stack)){
+  if( Stack_empty(stack) == 1 ){
     //printf("Stack_pop info: %d\n", stack->inicio->info);
     (*info) = stack->inicio->info;
     TNo* aux = stack->inicio;
@@ -58,7 +58,7 @@ int Stack_full(Stack* stack){
   return 0;
 }
 int Stack_empty(Stack* stack){
-  return stack->qty == 0;
+  return (stack->qty == 0) ? 1 : 0;
 }
 int Stack_qty(Stack* stack){
   return stack->qty;

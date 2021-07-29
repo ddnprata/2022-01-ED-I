@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include<string.h>
 
+/*
+Escreva um algoritmo que use uma pilha para inverter a ordem das 
+letras de cada palavra de uma string ASCII, preservando a ordem 
+das palavras. Por exemplo, para a string ESTE EXERCICIO E MUITO FACIL 
+o resultado deve ser ETSE OICICREXE E OTIUM LICAF.
+*/
+
 int main(int argc, char* argv[]){
   if(argc>1){
     Stack *S1 = Stack_create();  
@@ -19,8 +26,7 @@ int main(int argc, char* argv[]){
       }
     }
     while(Stack_pop(S1, &temp)) 
-      putchar((char)temp); 
-
+      putchar((char)temp);
   }
   return 0;
 }
